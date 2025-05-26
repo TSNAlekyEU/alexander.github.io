@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <title>Poušť v Dubaii</title>
+</head>
+<body>
+
+<div class="video">
+    <video autoplay loop muted src="img/3571195-uhd_3840_2160_30fps.mp4" width="100%" height="115%"></video>
+</div>
+
+    <header>
+        <div class="logo">
+            <img src="img/3465596_desert_egypt_egyptian_giza_landmark_icon.png" alt="Logo pro stránku">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#uvod">Úvod</a></li>
+                <li><a href="#poust">Poušť</a></li>
+                <li><a href="#zajimavosti">Zajímavosti</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="nadpis">
+        <div class="kontent">
+            <h1>Tajemství pouště</h1>
+            <p>Objevte skrytou krásu a záhady nejsušších míst na Zemi.</p>
+            <a href="#poust" class="tlacitko">Začít objevovat</a>
+        </div>
+    </div>
+</body>
+
+    <!--Úvod-->
+    <section id="uvod" class="section">
+        <div class="text-container">
+            <h2 class="uvodni-text">Svět pouští</h2>
+            <p>Pouště jsou jedny z nejzajímavějších a nejzáhadnějších míst na naší planetě. Na první pohled mohou působit pustě a nehostinně, ale při bližším pohledu odhalují svět plný života, historie a přírodních zázraků. Od nekonečných písečných dun Sahary, přes kamenité pláně Gobi, až po vyprahlé slaniska v Americe – každá poušť má svůj jedinečný charakter a kouzlo.</p>
+            <p>Navzdory extrémním podmínkám zde žijí rostliny a zvířata, která se neuvěřitelně přizpůsobila životu bez vody a ve vysokých teplotách. Pouště jsou také domovem mnoha lidských kultur, které tu po staletí přežívají díky hluboké znalosti přírody.</p>
+        </div>
+    </section>
+
+    <!--Poušť Sekce-->
+    <section id="poust" class="section bg-animate">
+        <h2 class="uvodni-text">Typy pouští</h2>
+        <div class="desert-grid">
+            <div class="ramecek">
+                <img src="img/pisecna duna 2.jpg" alt="Písečné duny">
+               
+                <div class="poust-kontent">
+                    <h3>Písečné duny</h3>
+                    <p>Nejznámější typ pouště v okolí Dubaje. Tyto zlaté duny se neustále mění působením větru a nabízí dokonalé prostředí pro safari a písečné sporty.</p>
+                </div>
+           
+            </div>
+            <div class="ramecek">
+                <img src="img/kamenna poust.jpg" alt="Kamenná poušť">
+                <div class="poust-kontent">
+                    <h3>Kamenná poušť</h3>
+                    <p>Méně známá, ale stejně fascinující část dubajské pouště. Charakteristická ostrými kameny a skalnatým terénem s minimální vegetací.</p>
+                </div>
+                
+            </div>
+            <div class="ramecek">
+                <img src="img/solna plan.jpg" alt="Solná planina">
+                <div class="poust-kontent">
+                    <h3>Solná planina</h3>
+                    <p>Na některých místech narazíte na tzv. sabkhy - solné pláně, které vznikají vysycháním mořské vody. Vytvářejí unikátní bílé krajiny.</p>
+                </div>
+           
+            </div>
+        </div>
+    </section>
+
+    <!--Zajímavosti Sekce-->
+    <section id="zajimavosti" class="section">
+        <h2 class="uvodni-text">Zajímavosti o poušti</h2>
+        <div class="facts-container">
+           
+            <div class="fact-box">
+                <div class="icon">🌡️</div>
+                <h3>Extrémní teploty</h3>
+                <p>V letních měsících může teplota písečných dun dosáhnout až 70°C, zatímco v noci může klesnout hluboko pod 0°C.</p>
+            
+            </div>
+            <div class="fact-box">
+                <div class="icon">🐪</div>
+                <h3>Velbloudi</h3>
+                <p>Velbloudi jsou dokonale přizpůsobeni životu v poušti. Dokáží přežít bez vody až 15 dní a jsou nedílnou součástí beduínské kultury.</p>
+            
+            </div>
+            <div class="fact-box">
+                <div class="icon">🛕</div>
+                <h3>Pyramidy</h3>
+                <p>Pyramidy jsou monumentální stavby, které sloužily především jako hrobky pro egyptské faraony. Nejznámější jsou pyramidy v Gíze – zejména Velká pyramida faraona Cheopse, která je jedním ze sedmi divů starověkého světa.</p>
+            
+            </div>
+            <div class="fact-box">
+                <div class="icon">🦁</div>
+                <h3>Zvířata</h3>
+                <p>V poušti žijí zvířata, která se dokázala přizpůsobit extrémnímu horku a nedostatku vody. Patří sem například velbloudi, štíři, hadi, ještěři nebo fenek – pouštní liška s velkýma ušima. Většina těchto zvířat je aktivní hlavně v noci, kdy je chladněji.</p>
+            
+            </div>
+        </div>
+    </section>
+
+    <!--Mapa-->
+    <!--Mapa-->
+    <section id="mapa" class="section">
+    <h2 class="uvodni-text">Mapa pouštních oblastí</h2>
+    <div class="map-wrapper">
+        <div id="mapid"></div>
+    </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('mapid').setView([25.0, 13.0], 4); // Sahara
+      
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap přispěvatelé',
+            maxZoom: 18,
+        }).addTo(map);
+      
+        L.marker([25.0, 13.0]).addTo(map)
+          .bindPopup('Sahara - největší horká poušť na světě')
+          .openPopup();
+      </script>
+      
+    <!--Kontakt-->
+    <section id="kontakt" class="section">
+        <h2 class="uvodni-text">Kontaktujte nás</h2>
+        <div class="formular">
+           
+            <div class="form-group">
+                <label for="name">Jméno</label>
+                <input type="text" id="name" placeholder="Vaše jméno">
+            </div>
+           
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Váš e-mail">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Zpráva</label>
+                <textarea id="message" placeholder="Vaše zpráva"></textarea>
+          
+            </div>
+            <button class="submit-btn">Odeslat</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-kontent">
+            <h2>🌵 Desert Master</h2>
+            <p>E-mail: hlusickaalexander@gmail.com</p>
+            <p>@ 2025 Desert master giga chad / osicek</p>
+        </div>
+    </footer>

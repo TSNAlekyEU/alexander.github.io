@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(214, 214, 74);
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(0, 0, 0) ;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Video do pozadí*/
+.video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*hlavička*/
+
+header {
+    background-color: rgb(207, 152, 50);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    transition: all 0.3s ease;
+    top: 0;
+    z-index: 1; /*z-index pokud je v plusu tak to znamená že header je nahoře prioritní*/
+}
+
+/*logo a navigace*/
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px; 
+    align-items: center;
+}
+
+nav ul li a {
+    color: rgb(61, 58, 58);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/*Pro mobilní zařízení*/
+header {
+    padding: 10px 3%;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/*Responzivita headru mobile*/
+@media screen and (max-width: 768px) {
+header {
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+.nadpis h1 {
+    font-size: 2em;
+}
+
+.nadpis p {
+    font-size: 1em;
+}
+
+.desert-grid, .facts-container {
+    grid-template-columns: 1fr;
+}
+
+.section {
+    padding: 40px 3%;
+}
+}
+
+
+/*Efekt potržení*/
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(250, 232, 150);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgb(250, 232, 150);
+}
+
+
+/*Nadpisová sekce a kontent u nadpisu prozatím nevím jak to mám pojmenovat*/
+
+.nadpis {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(70, 69, 69);
+}
+
+/*toto je to písmo co je na videu*/
+.kontent {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nadpis p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    animation: FadeIn 1s ease-in-out 0.5s both;
+}
+
+.nadpis h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tlacitko {
+    display: inline-block;
+    background-color: rgb(253, 165, 0);
+    color: rgb(46, 46, 46);
+    padding: 18px 33px ;
+    border-radius: 30px ;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in-out both;
+}
+
+.tlacitko:hover {
+    background-color: rgb(231, 174, 18);
+    box-shadow: 0 3px 15px;
+}
+
+
+/*Zajimavostní věci, které jsou v pošti*/
+.popis {
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px ;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.popis:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px ;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: Arial, Helvetica, sans-serif; color: rgb(70, 69, 69); line-height: 1.6; }
+
+/*Sekce*/
+.section {
+    padding: 80px 5%;
+    scroll-margin-top: 70px;
+}
+
+.uvodni-text {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgb(207, 152, 50);
+}
+
+.text-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*Uvod sekce*/
+#uvod {
+    background: linear-gradient(to bottom, rgb(252, 241, 215), rgb(255, 255, 255));
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+/*Poust sekce*/
+#poust {
+    background-color: rgb(253, 246, 227);
+    min-height: 60vh;
+}
+
+.desert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ramecek {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.ramecek:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.ramecek img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.poust-kontent {
+    padding: 20px;
+}
+
+.poust-kontent h3 {
+    margin-bottom: 10px;
+    color: rgb(207, 152, 50);
+}
+
+/*Zajimavosti sekce*/
+#zajimavosti {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(252, 241, 215));
+    padding: 100px 5%;
+}
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.fact-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.fact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(253, 165, 0);
+}
+
+/*Mapicka*/
+#mapa {
+    position: relative;
+    z-index: 0;
+    margin-top: 10px; 
+}
+
+.map-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 3px solid #c2a86f;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+#mapid {
+    height: 450px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #mapid {
+        height: 300px;
+    }
+}
+
+
+/*Kontakt*/
+#kontakt {
+    background: linear-gradient(to bottom, rgb(252, 241, 215), rgb(207, 152, 50));
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.formular {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/*Velikost ramecku do ktereho se pise*/
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+/*tlacitko odeslat*/
+.submit-btn {
+    background-color: rgb(253, 165, 0);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(231, 174, 18);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+
+
+/*Pomocí Chat-gpt*/
+
+/*Barevny prechod*/
+@keyframes backgroundTransition {
+    0% { background-color: rgb(253, 246, 227); }
+    50% { background-color: rgb(252, 241, 215); }
+    100% { background-color: rgb(253, 246, 227); }
+}
+
+.bg-animate {
+    animation: backgroundTransition 10s infinite;
+}
+
+/*Patička*/
+footer {
+background-color: rgb(207, 152, 50);
+color: rgb(66, 66, 66);
+padding: 10px 0 10px;
+}
+
+.footer-kontent {
+    display: grid;
+    gap: 19px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+footer p {
+justify-content: center;
+text-align: center; 
+}
+
+
+
+
+
+
